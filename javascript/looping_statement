@@ -1,0 +1,13 @@
+arr = [10, 20, 30, [40,50], "KEC", 'a', 10.2, true]
+console.log(arr)
+
+//for in
+for( var a in arr){
+    console.log(a);
+    console.log("element present in index", a, "is", arr[a]);
+}
+
+//for of
+for ( var b of arr){
+    console.log(b);
+}
