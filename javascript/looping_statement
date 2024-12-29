@@ -11,3 +11,6 @@ for( var a in arr){
 for ( var b of arr){
     console.log(b);
 }
+
+//for each
+arr = [10, 20, 30]
