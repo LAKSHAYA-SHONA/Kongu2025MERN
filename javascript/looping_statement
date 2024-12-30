@@ -14,3 +14,22 @@ for ( var b of arr){
 
 //for each
 arr = [10, 20, 30]
+arr.forEach((element) =>{
+    console.log(element)
+})
+
+//array example
+arr.forEach((element,index) => {
+    console.log("Element:", element, "index:", index)
+})
+
+//key value example
+obj1 = {
+    "Firstname" : "shona",
+    "lastname" : "saravanan",
+    "age" : 20
+}
+obj1.forEach((value) => {
+    console.log(value)
+})
+
