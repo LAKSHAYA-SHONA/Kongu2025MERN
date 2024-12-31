@@ -8,6 +8,8 @@ import HomePage from './Components/functionalComponent/Home.jsx';
 import NavBar from './Components/functionalComponent/NavBar.jsx';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import UseEffect from './Components/functionalComponent/useEffect.jsx';
+import UseRef from './Components/functionalComponent/useref.jsx';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/about" element = {<About college = "KEC" clg1 = "KCAS" clg2="KNC"/>} />
             <Route path="/contact" element = {<Contact/>} />
             <Route path="/gallery" element = {<Gallery/>} />
+            <Route path="/useeffect" element = {<UseEffect/>} />
+            <Route path="/useref" element = {<UseRef/>} />
         </Routes>
       </BrowserRouter>
       <Footer/>

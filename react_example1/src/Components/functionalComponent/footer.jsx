@@ -6,6 +6,7 @@ var Footer = () => {
         <div className='Foot'>
         <footer>
             <form>
+                <h2>Thank You!</h2>
                 <label>Name:</label><br/>
                 <input type='text' placeholder='Enter your Name'></input>
                 <br/>
