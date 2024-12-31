@@ -1,0 +1,24 @@
+ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+    text-decoration: none;  /*to avoid the underline that comes once it is converted into link for navigation*/
+    list-style-type: none;  /*to remove the dot of the ul ol li*/
+    background-color: rgb(167, 138, 102);
+    color: rgb(41, 6, 6);
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+li{
+    cursor: pointer;
+    padding: 3px;
+}
+
+li:hover{
+    background-color: bisque;
+    color: rgb(84, 42, 11);
+    border-radius: 5px;
+}
