@@ -6,15 +6,15 @@ var Footer = () => {
         <div className='Foot'>
         <footer>
             <form>
-                <h2>Thank You!</h2>
+                <h2>Feedback!</h2>
                 <label>Name:</label><br/>
                 <input type='text' placeholder='Enter your Name'></input>
                 <br/>
                 <label>Email:</label><br/>
                 <input type='email' placeholder='Enter your Email'></input>
                 <br/>
-                <label>Phone number:</label><br/>
-                <input type='text' placeholder='Enter your Phone Number'></input>
+                <label>Feedback:</label><br/>
+                <input type='text' placeholder='Enter your Feedback'></input>
                 <br/>
                 <button type='button' placeholder='Submit'>Submit</button>
             </form>

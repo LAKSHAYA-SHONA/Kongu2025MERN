@@ -15,6 +15,9 @@ var NavBar = () => {
                     <li><Link to = "/usecontext">USECONTEXT</Link></li>
                     <li><Link to = "/usememo">USEMEMO</Link></li>
                     <li><Link to = "/contact">CONTACT</Link></li>
+                    <li><Link to = "/loginpage">LOGIN</Link></li>
+                    <li><Link to = "/signup">SIGNUP</Link></li>
+
                 </ul>
             </nav>
         </header>

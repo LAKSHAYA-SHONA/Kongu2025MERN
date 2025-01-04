@@ -13,7 +13,7 @@ import UseRef from './Components/functionalComponent/useref.jsx';
 import UseContext from './Components/functionalComponent/useContext.jsx';
 import UseMemo from './Components/functionalComponent/UseMemo.jsx';
 import LoginPage from './Components/functionalComponent/login.jsx';
-import SignupPage from './Components/functionalComponent/signup.jsx';
+import Signup from './Components/functionalComponent/signup.jsx';
 
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
             <Route path="/usememo" element = {<UseMemo/>} />
             <Route path="/contact" element = {<Contact/>} />
             <Route path="/loginpage" element = {<LoginPage/>} />
-            <Route path="/signup" element = {<SignupPage/>} />
+            <Route path="/signup" element = {<Signup/>} />
 
         </Routes>
       </BrowserRouter>
