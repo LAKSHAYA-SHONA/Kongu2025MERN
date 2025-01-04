@@ -6,7 +6,9 @@ var mdb = require('mongoose')
 var User = require('./models/users')
 var app = express()
 const PORT = 3001;
+var cors = require('cors')
 app.use(express.json())
+app.use(cors())
 
 mdb.connect("mongodb://127.0.0.1:27017/kec").then(() => {
     console.log("MongoDB connection successful")
@@ -28,17 +30,14 @@ app.get('/static', (req, res) => {
 })
 
 app.post('/signup', (req, res) => {
-    console.log(req.body)
-    var { first_name, last_name, email } = req.body
-    console.log(first_name, last_name, email)
+    console.log(req.body);
+    var {firstName , lastName, email , password}=req.body
+    console.log(firstName , lastName, email , password);
     try {
-        var newUser = new User({
-            first_name: first_name,
-            last_name: last_name,
-            email: email
-        })
-        newUser.save()
-        console.log("User Added Successfully")
+        var newUser = new User(req.body)
+        console.log(req.body.password);
+        newUser.save();
+        console.log("User Added Successfully");
         res.status(200).send("User Added Succussfully")
     }
     catch (err) {
@@ -54,6 +53,29 @@ app.get('/getsignup', async(req,res) => {
     }
     catch(err){
         console.log("Cannot able to read the records")
+    }
+})
+
+app.post('/login', async(req,res) => {
+    var {email, password} = req.body
+    try{
+        var existingUser = await User.findOne({email:email})
+        if(existingUser){
+            if(existingUser.password !== password){
+                res.json({message: "Login fail", isLoggedIn:false})
+            }
+        
+        else{
+            res.json({message: "Login successful", isLoggedIn:true})
+        }
+    }
+        else{
+            res.json({message: "Login fail", isLoggedIn:false})
+        }
+
+    }
+    catch(err){
+        console.log("Login failed")
     }
 })
 
