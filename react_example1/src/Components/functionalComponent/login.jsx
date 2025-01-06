@@ -36,7 +36,7 @@ function LoginPage() {
       var message = req.data.message
       console.log(message)
     }
-    else{
+    else{                     
       alert("Wrong Credentials")
     }
   }
